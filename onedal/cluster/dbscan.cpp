@@ -34,6 +34,24 @@ namespace oneapi::dal::python {
     };
 
     // init train method for pybind
+    template<typename Policy, typename Task>
+    void init_train_ops(py::module_& m) {
+        m.def("train",
+            [](const Policy& policy,
+                const table& data,
+                const table& weights){
+            
+        });
+    }
+
+    void init_infer_ops(py::module_& m) {
+        m.def("infer",
+            [](const Policy& policy,
+                const table& data,
+                const table& weights){
+            
+        });
+    }
 
     // init infer method for pybind
 
